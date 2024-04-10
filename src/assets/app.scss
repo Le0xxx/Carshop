@@ -1,0 +1,121 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+:root{
+    --primary: #b6070a;
+    --secondary: #39990c;
+    --light: #8b8b8b;
+}
+html, body{
+    font-family: 'Inter', sans-serif;
+    scroll-behavior: smooth;
+}
+h2{
+    font-size:25px;
+    font-weight: 700;
+
+}
+h1{
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 45px;
+    padding: 20px 0;
+    @media (max-width:theme('screens.laptop')){
+        font-size:30px;
+        line-height: 35px;
+    }
+}
+.container {
+    width: 100%;
+    padding-right: 1ren;
+    padding-left: 1ren;
+}
+@media (min-width: 950px) {
+    .container {
+        max-width: 950px;
+    }
+}
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1200px;
+    }
+}
+@media (min-width: 1440px) {
+    .container {
+        max-width: 1440px;
+    }
+}
+$midnight: white;
+input {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+.row {
+  display:flex;
+  .col {
+    flex:1;
+    &:last-child {
+      margin-left: 1em;
+    }
+  }
+}
+.tabs {
+  border-radius: 8px;
+  overflow: hidden;
+}
+.tab {
+  width: 100%;
+  color: black;
+  overflow: hidden;
+  &-label {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+    background: $midnight;
+    font-weight: bold;
+    cursor: pointer;
+    &:hover {
+      background: darken($midnight, 0%);
+    }
+    &::after {
+      content: "\276F";
+      width: 1em;
+      height: 1em;
+      text-align: center;
+      transition: all .35s;
+    }
+  }
+  &-content {
+    max-height: 0;
+    padding: 0 1em;
+    color: black;
+    background: white;
+    transition: all .35s;
+    font-size: 20px;
+  }
+  &-close {
+    display: flex;
+    justify-content: flex-end;
+    padding: 1em;
+    font-size: 0.75em;
+    background: $midnight;
+    cursor: pointer;
+    &:hover {
+      background: darken($midnight, 10%);
+    }
+  }
+}
+input:checked {
+  + .tab-label {
+    background: darken($midnight, 10%);
+    &::after {
+      transform: rotate(90deg);
+    }
+  }
+  ~ .tab-content {
+    max-height: 20000px;
+  }
+}
+

@@ -4,7 +4,7 @@
 	export let diler: Diler;
 </script>
 
-<a href="{diler.url}">
+<a href="{diler.url}" class="w-8/12">
 <div class="car-card " style="background-image:url({diler.photo});">
 	<div class="shadow">
 		<div class="city">{diler.name}</div>

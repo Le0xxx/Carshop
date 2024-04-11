@@ -32,7 +32,7 @@ export const dilers: Array<Diler> = [
     },
     {
         "name": "Г.Краснодар",
-        "photo": "https://www.yuga.ru/media/b1/37/zns_9553__lblerla.jpg",
+        "photo": "https://static.tildacdn.com/tild6239-3963-4661-b831-396633393466/photo.jpg",
         "enName": null,
         "url":"https://krasnodar.service-keyauto.ru/?utm_medium=maps&utm_source=g-maps_none_krd-s_sever_vw-kom_service"
     }

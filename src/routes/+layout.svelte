@@ -5,6 +5,3 @@
 
 <slot />
 <Footer />
-
-<style>
-</style>

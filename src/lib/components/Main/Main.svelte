@@ -1,8 +1,7 @@
 <script>
 	// @ts-nocheck
-
 	import CarCard from '../Cars/CarCard.svelte';
-	import Diler from '../Dilers/DCDiler.svelte';
+	import Diler from '../Dilers/Diler.svelte';
 	import { dilers } from '$lib/database/cars';
 	import { cars } from '$lib/database/cars';
 </script>

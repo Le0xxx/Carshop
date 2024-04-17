@@ -120,7 +120,7 @@
 					>Сложность пароля: {strengthDescription}</label
 				>
 				<meter id="password-strength" value={score} low="1.9" high="2.9" optimum="4" max="4" />
-				<a href="/"><input type="submit" value="Зарегистрироваться" /></a>
+				<input type="submit" value="Зарегистрироваться" />
 			</div>
 		</form>
 		<div class="reg_head">Уже зарегистрированы? <a class="plain" href="/signup">Войти</a></div>

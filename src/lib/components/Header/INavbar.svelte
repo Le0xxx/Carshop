@@ -1,3 +1,9 @@
+<script>
+	// @ts-nocheck
+
+	import { isOverlayOpen } from '../../../popup/Overlay';
+</script>
+
 <div class="navbar">
 	<div class="container mx-auto flex items-center justify-between">
 		<a href="/" class="navbar_img"><h2>CARshop</h2></a>
@@ -7,22 +13,15 @@
 		<a href="/" class="navbar_img">Партнерские дилеры</a>
 		<a href="/" class="navbar_img">Бренды авто</a>
 		<div class="izb">
-			<a href=""><img class="w-5 h-5" src="/images/love.jpg" alt="love" /></a>
-			<div class="text">Избранное</div>
+			<a href=""><img class="w-5 h-5 ml-7" src="/images/love.jpg" alt="love" />
+			<div class="text">Избранное</div></a>
 		</div>
 		<div class="izb">
-			<a href=""><img class="w-5 h-5" src="/images/what.png" alt="love" /></a>
-			<div class="text">Мои объявления</div>
+			<a href=""><img class="w-5 h-5 ml-12" src="/images/what.png" alt="love" />
+			<div class="text">Мои объявления</div></a>
 		</div>
-		<div id="ShowHide1">
-			<a href=""><img class="avatar" src="/images/avatar.jpg" alt="avatar" /></a>
-			<div id="exemple1">
-				<p><a href="">Избранное</a></p>
-				<p>Мои объявления</p>
-				<p>Профиль</p>
-				<p>Выход</p>
-			</div>
-		</div>
+		<a href="" on:click={() => {isOverlayOpen.set(true);}}>
+			<img class="avatar" src="/images/avatar.jpg" alt="avatar" /></a>
 	</div>
 </div>
 
@@ -64,7 +63,6 @@
 		width: 44px;
 		height: 44px;
 		border-radius: 50%;
-		
 	}
 	.izb {
 		display: flex;
@@ -75,16 +73,4 @@
 	.text {
 		font-size: 15px;
 	}
-	#exemple1 {
-  overflow: hidden;
-  max-height: 0;
-  background: gray;
-  transition: max-height 0.5s;
-  max-width: 44px;
-}
-
-#ShowHide1:hover #exemple1 {
-  max-height: 100px;
-  transition: max-height 2s;
-}
 </style>

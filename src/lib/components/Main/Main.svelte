@@ -4,9 +4,12 @@
 	import Diler from '../Dilers/Diler.svelte';
 	import { dilers } from '$lib/database/cars';
 	import { cars } from '$lib/database/cars';
+	import { isOverlayOpen } from '../../../popup/Overlay';
 </script>
 
-<div class="films">
+<!-- svelte-ignore a11y-no-static-element-interactions -->
+<!-- svelte-ignore a11y-click-events-have-key-events -->
+<div class="films" on:click={() => isOverlayOpen.set(false)}>
 	<div class="container mx-auto">
 		<header class="header">
 			<h1 class="text_img">Работаем более<br /> чем с 1000 дилерами<br /> по всей России</h1>
@@ -190,7 +193,6 @@
 		}
 	}
 	.header {
-		position: relative;
 		background-image: url('car_main.png');
 		height: 600px;
 		background-repeat: round;

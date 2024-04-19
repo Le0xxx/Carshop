@@ -12,7 +12,7 @@
 </div>
 </a>
 
-<style>
+<style lang="scss">
 	.car-card {
 		height: 260px;
 		width: 460px;
@@ -21,6 +21,9 @@
 		border-radius: 30px;
 		background-size: contain ;
 		background-repeat:round;
+		@media (max-width: theme('screens.laptop')) {
+			width: 350px;
+		}
 		
 		
 	}

@@ -151,25 +151,18 @@
 			grid-template-columns: repeat(2, 1fr);
 		}
 		@media (max-width: theme('screens.laptop')) {
-			grid-template-columns: repeat(1, 1fr);
+			grid-template-columns: repeat(2, 1fr);
 		}
 		@media (max-width: theme('screens.tablet')) {
 			grid-template-columns: 1fr;
 		}
 	}
 	.why {
-		width: 330px;
-		height: 400px;
+		width: 350px;
+		height: 450px;
 		background-color: white;
 		border-radius: 30px;
 		color: black;
-
-		@media (max-width: theme('screens.laptop')) {
-			width: 180px;
-		}
-		@media (max-width: theme('screens.tablet')) {
-			width: 140px;
-		}
 	}
 	.txt {
 		margin-left: 20px;
@@ -204,6 +197,9 @@
 	}
 	.text_diler {
 		font-size: 22px;
-		margin-right: 20px;
+		margin-right: 15px;
+		@media (max-width: theme('screens.laptop')) {
+				font-size: 16px;
+		}
 	}
 </style>

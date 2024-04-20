@@ -136,7 +136,6 @@
 	.car_grid {
 		display: grid;
 		grid-template-columns: repeat(4, 1fr);
-		gap: 40px;
 		@media (max-width: theme('screens.desktop')) {
 			grid-template-columns: repeat(3, 1fr);
 		}

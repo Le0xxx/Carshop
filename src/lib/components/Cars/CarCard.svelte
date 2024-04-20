@@ -16,7 +16,7 @@
         width: 300px;
         background-size: cover;
         border-top-left-radius: 30px;
-		border-top-right-radius:30px
+		border-top-right-radius:30px;
     }
     .containers{
         height: 330px;
@@ -25,6 +25,7 @@
         border-radius: 30px;
         color:black;
         margin-left: 15px;
+        margin-bottom: 30px;
     }
     .map{
 		float:left;

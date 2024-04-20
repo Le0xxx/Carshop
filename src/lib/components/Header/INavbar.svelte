@@ -38,6 +38,7 @@
 		font-weight: 700;
 		line-height: normal;
 		padding: 5px 0;
+		display: flex;
 		@media (max-width: theme('screens.desktop')) {
 			font-size: 20px;
 			font-weight: 500;
@@ -56,8 +57,7 @@
 		max-width: 1855px;
 	}
 	.map {
-		float: left;
-		margin: 5px 2px;
+		margin: 2px 2px;
 	}
 	@media (max-width: theme('screens.laptop')) {
 		.container {
@@ -78,4 +78,5 @@
 	.text {
 		font-size: 15px;
 	}
+	
 </style>

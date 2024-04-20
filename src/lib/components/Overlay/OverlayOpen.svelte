@@ -1,10 +1,11 @@
 <script>
+	import {fly} from 'svelte/transition'
 	import { isOverlayOpen } from '../../../popup/Overlay';
 </script>
 
 <!-- svelte-ignore a11y-click-events-have-key-events -->
 <!-- svelte-ignore a11y-no-static-element-interactions -->
-<div class="overlay" on:click={() => isOverlayOpen.set(false)}>
+<div class="overlay" on:click={() => isOverlayOpen.set(false)} transition:fly>
 	<div class="text">
 		<p class="vnutri"><a href="/main-pr/profile">Профиль</a></p>
 		<p class="vnutri"><a href=""><img class="w-5 h-5" src="/images/love.jpg" alt="love" />
@@ -18,12 +19,13 @@
 
 <style>
 	.overlay {
-		position: fixed;
-		width: 89%;
 		height: 450px;
 		display: flex;
 		justify-content: flex-end;
 		padding: 5px 0;
+		position: absolute;
+		right: 105px;
+		top:70px;
 	}
 	.text {
 		color: black;
@@ -32,6 +34,7 @@
 		padding: 10px 30px;
         border-color: black;
         border-width: 1px;
+		width: 250px;
 	}
     .vnutri{
         margin-top: 10px;

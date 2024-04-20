@@ -4,13 +4,14 @@
 	import Diler from '../Dilers/Diler.svelte';
 	import { dilers } from '$lib/database/cars';
 	import { cars } from '$lib/database/cars';
-	import { isOverlayOpen } from '../../../popup/Overlay';
+	import OverlayOpen from '../Overlay/OverlayOpen.svelte';
+	let isOpen = false;
 </script>
 
 <!-- svelte-ignore a11y-no-static-element-interactions -->
 <!-- svelte-ignore a11y-click-events-have-key-events -->
-<div class="films" on:click={() => isOverlayOpen.set(false)}>
-	<div class="container mx-auto">
+	<div class="films" on:click={() => isOpen=false}>
+	<div class="container mx-auto -mt-4">
 		<header class="header">
 			<h1 class="text_img">Работаем более<br /> чем с 1000 дилерами<br /> по всей России</h1>
 		</header>

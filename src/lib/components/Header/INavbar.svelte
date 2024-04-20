@@ -1,7 +1,8 @@
 <script>
 	// @ts-nocheck
 
-	import { isOverlayOpen } from '../../../popup/Overlay';
+	import OverlayOpen from '../Overlay/OverlayOpen.svelte';
+	let isOpen = false;
 </script>
 
 <div class="navbar">
@@ -20,8 +21,12 @@
 			<a href=""><img class="w-5 h-5 ml-12" src="/images/what.png" alt="love" />
 			<div class="text">Мои объявления</div></a>
 		</div>
-		<a href="" on:click={() => {isOverlayOpen.set(true);}}>
-			<img class="avatar" src="/images/avatar.jpg" alt="avatar" /></a>
+			<!-- svelte-ignore a11y-click-events-have-key-events -->
+			<!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
+			<img class="avatar" src="/images/avatar.jpg" alt="avatar" on:click={() => (isOpen = !isOpen)} />
+			{#if isOpen}
+			<OverlayOpen />
+			{/if}
 	</div>
 </div>
 

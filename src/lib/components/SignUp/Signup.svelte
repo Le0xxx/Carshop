@@ -43,7 +43,7 @@
 					on:click={togglePassword}				/>
 					{/if}
 				</div>
-				<a href="/"><input type="submit" value="Войти" /></a>
+				<a href="/main-pr"><input type="submit" value="Войти" /></a>
 			</div>
 		</form>
 	</div>

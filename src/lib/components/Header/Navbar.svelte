@@ -51,4 +51,9 @@
 			max-width: 900px;
 		}
 	}
+	img{
+		width: 20px;
+		height: 20px;
+		border-radius:0%;
+	}
 </style>

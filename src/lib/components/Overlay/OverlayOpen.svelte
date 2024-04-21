@@ -8,9 +8,9 @@
 <div class="overlay" on:click={() => isOverlayOpen.set(false)} transition:fly>
 	<div class="text">
 		<p class="vnutri"><a href="/main-pr/profile">Профиль</a></p>
-		<p class="vnutri"><a href=""><img class="w-5 h-5" src="/images/love.jpg" alt="love" />
+		<p class="vnutri"><a href=""><img src="/images/love.jpg" alt="love" />
 			<div class="text1">Избранное</div></a></p>
-		<p class="vnutri"><a href=""><img class="w-5 h-5" src="/images/what.png" alt="love" />
+		<p class="vnutri"><a href=""><img src="/images/what.png" alt="love" />
 			<div class="text1">Мои объявления</div></a></p>
 		<p class="vnutri"><a href="/">Вызод</a></p>
 		<slot />
@@ -45,4 +45,9 @@
     .text1{
         margin-left: 5px;
     }
+	img{
+		height: 20px;
+		width: 20px;
+		border-radius: 0%;
+	}
 </style>

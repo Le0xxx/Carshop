@@ -14,11 +14,11 @@
 		<a href="/" class="navbar_img">Партнерские дилеры</a>
 		<a href="/" class="navbar_img">Бренды авто</a>
 		<div class="izb">
-			<a href=""><img class="w-5 h-5 ml-7" src="/images/love.jpg" alt="love" />
+			<a href=""><img class="ml-7" src="/images/love.jpg" alt="love" />
 			<div class="text">Избранное</div></a>
 		</div>
 		<div class="izb">
-			<a href=""><img class="w-5 h-5 ml-12" src="/images/what.png" alt="love" />
+			<a href=""><img class="ml-12" src="/images/what.png" alt="love" />
 			<div class="text">Мои объявления</div></a>
 		</div>
 			<!-- svelte-ignore a11y-click-events-have-key-events -->
@@ -57,7 +57,7 @@
 		max-width: 1855px;
 	}
 	.map {
-		margin: 2px 2px;
+		margin: 5px 2px;
 	}
 	@media (max-width: theme('screens.laptop')) {
 		.container {
@@ -78,5 +78,9 @@
 	.text {
 		font-size: 15px;
 	}
-	
+	img{
+		width: 20px;
+		height: 20px;
+		border-radius:0%;
+	}
 </style>

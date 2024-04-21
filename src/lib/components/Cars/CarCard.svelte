@@ -12,8 +12,6 @@
 </div>
 <style>
     .car-card{
-        height: 220px;
-        width: 300px;
         background-size: cover;
         border-top-left-radius: 30px;
 		border-top-right-radius:30px;
@@ -30,5 +28,12 @@
     .map{
 		float:left;
         width: 19px;
+        height: 18px;
+        margin-top: 2px;
 	}
+    img{
+        height: 220px;
+        width: 300px;
+        border-radius: 0%;
+    }
 </style>

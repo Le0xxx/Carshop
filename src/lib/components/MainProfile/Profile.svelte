@@ -1,5 +1,5 @@
 <script lang="ts">
-	import CarCard from '../Cars/CarCard.svelte';
+	import Auto from '../BestAuto/Auto.svelte';
 	import { cars } from '$lib/database/cars';
 	let name = '';
 	let email = '';
@@ -90,7 +90,7 @@
 		<h1 class="text">Избранное</h1>
 		<div class="car_grid">
 			{#each cars as car}
-				<CarCard {car} />
+				<Auto {car} />
 			{/each}
 		</div>
 	</div>

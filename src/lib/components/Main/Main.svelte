@@ -1,6 +1,6 @@
 <script>
 	// @ts-nocheck
-	import CarCard from '../Cars/CarCard.svelte';
+	import Auto from '../BestAuto/Auto.svelte';
 	import Diler from '../Dilers/Diler.svelte';
 	import { dilers } from '$lib/database/cars';
 	import { cars } from '$lib/database/cars';
@@ -10,7 +10,7 @@
 
 <!-- svelte-ignore a11y-no-static-element-interactions -->
 <!-- svelte-ignore a11y-click-events-have-key-events -->
-	<div class="films" on:click={() => isOpen=false}>
+	<div class="back" on:click={() => isOpen=false}>
 	<div class="container mx-auto -mt-4">
 		<header class="header">
 			<h1 class="text_img">Работаем более<br /> чем с 1000 дилерами<br /> по всей России</h1>
@@ -46,7 +46,7 @@
 		<h1 class="text">Лучшая цена</h1>
 		<div class="car_grid">
 			{#each cars as car}
-				<CarCard {car} />
+				<Auto {car} />
 			{/each}
 		</div>
 	</div>
@@ -111,11 +111,9 @@
 </div>
 
 <style lang="scss">
-	.films {
-		background: rgb(230, 229, 229);
+	.back {
 		color: white;
 		padding: 50px 0;
-		border-top: 1px solid var(--light);
 		height: 100%;
 	}
 

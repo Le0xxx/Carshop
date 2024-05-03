@@ -50,7 +50,7 @@
 	}
 </script>
 
-<div class="regist">
+<div class="back">
 	<div class="container">
 		<h2 class="reg_head">Регистрация</h2>
 		<form on:submit={handleSubmit}>
@@ -136,10 +136,8 @@
 		text-align: center;
 		padding: 5px;
 	}
-	.regist {
-		background: rgb(230, 229, 229);
+	.back {
 		padding: 50px 0;
-		border-top: 1px solid var(--light);
 		min-height: 899px;
 	}
 	.container {

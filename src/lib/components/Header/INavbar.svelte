@@ -53,7 +53,7 @@
 		}
 	}
 	.navbar {
-		padding: 10px 0;
+		padding: 13px 0;
 		max-width: 1855px;
 	}
 	.map {

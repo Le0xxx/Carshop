@@ -26,14 +26,27 @@
 
 			reader.addEventListener('load', (event) => {
 				if (imageGrid) {
+					// Remove the existing image
+					const existingImage = imageGrid.querySelector('img');
+					if (existingImage) {
+						imageGrid.removeChild(existingImage);
+					}
+					// Add the new image
 					const img = document.createElement('img');
 					imageGrid.appendChild(img);
 					img.src = (event.target as any).result as string;
 					img.alt = file.name;
+					// Clear the input file
+					target.value = '';
 				}
 			});
 		}
 	}
+		function handleRemoveImage() {
+    if (imageGrid && imageGrid.firstChild) {
+      imageGrid.removeChild(imageGrid.firstChild);
+    }
+  }
 </script>
 
 <body>
@@ -46,14 +59,15 @@
 						<img class="photo" src="\images\photo.png" alt="" />Загрузить фото
 					</div></label
 				>
-				<button class="delete">Удалить</button>
 				<input
 					type="file"
 					id="file-uploader"
+					accept="image/*"
 					bind:value={fileUploader}
 					on:change={handleFileUpload}
 					style="display:none;"
 				/>
+				<button class="delete" id="remove-image" on:click={handleRemoveImage}>Удалить</button>
 			</div>
 			<div class="tabs">
 				<label for="name" class="font-semibold ml-4">Фамилия и имя:</label>
@@ -205,7 +219,7 @@
 		position: relative;
 		margin-top: 15px;
 	}
-	.delete{
+	.delete {
 		height: 50px;
 		width: 175px;
 		background-color: rgb(136, 132, 132);
@@ -213,8 +227,7 @@
 		font-size: 18px;
 		color: white;
 		position: relative;
-		top:445px;
-		left:162px;
-
+		top: 445px;
+		left: 162px;
 	}
 </style>

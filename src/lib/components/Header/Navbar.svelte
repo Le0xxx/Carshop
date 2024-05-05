@@ -1,5 +1,5 @@
 <script>
-	import DcButton from '../Common/DCButton.svelte';
+	import Button from '../Common/Button.svelte';
 </script>
 
 <div class="navbar">
@@ -11,8 +11,8 @@
 		<a href="/" class="navbar_img">Партнерские дилеры</a>
 		<a href="/" class="navbar_img">Бренды авто</a>
 		<div class="navbar_img">
-			<a href="/signup"><DcButton>Вход</DcButton></a>
-			<a href="/reg"><DcButton>Регистрация</DcButton></a>
+			<a href="/signup"><Button>Вход</Button></a>
+			<a href="/reg"><Button>Регистрация</Button></a>
 		</div>
 	</div>
 </div>

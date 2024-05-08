@@ -9,7 +9,7 @@
 			<img class="map" src="/icon/map.png" alt="" />Сургут</a
 		>
 		<a href="/" class="navbar_img">Партнерские дилеры</a>
-		<a href="/" class="navbar_img">Бренды авто</a>
+		<a href="/search" class="navbar_img">Бренды авто</a>
 		<div class="navbar_img">
 			<a href="/signup"><Button>Вход</Button></a>
 			<a href="/reg"><Button>Регистрация</Button></a>

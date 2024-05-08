@@ -8,7 +8,7 @@
 <div class="overlay" on:click={() => isOverlayOpen.set(false)} transition:fly>
 	<div class="text">
 		<p class="vnutri"><a href="/main-pr/profile">Профиль</a></p>
-		<p class="vnutri"><a href=""><img src="/images/car.jpg" alt="car">
+		<p class="vnutri"><a href="/search"><img src="/images/car.jpg" alt="car">
 			<div class="text1">Бренды авто</div></a></p>
 		<p class="vnutri"><a href=""><img src="/images/love.jpg" alt="love" />
 			<div class="text1">Избранное</div></a></p>

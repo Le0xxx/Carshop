@@ -32,7 +32,7 @@
 			<h1 class="ml-4">Фильтры</h1>
 		</div>
 	</div>
-	<div class="block mx-auto">
+	<div class="blok mx-auto">
 		<td>
 			<input type="text" id="city" bind:value={city} placeholder="Марка" required />
 			<input type="text" id="city" bind:value={city} placeholder="Год от" required />
@@ -54,7 +54,7 @@
 	<div class="changes mx-auto"><div class="mx-auto text-lg">Поиск</div></div>
 	<div class="block2 mx-auto">
 		<div class="text">
-			<h1 class="ml-4">Результат</h1>
+			<h1 class="ml-9">Результат</h1>
 		</div>
         <div class="car_grid">
 			{#each cars as car}
@@ -76,7 +76,7 @@
 		padding: 35px 0;
 		min-height: 899px;
 	}
-	.block {
+	.blok {
 		height: 370px;
 		width: 1270px;
 		background-color: white;

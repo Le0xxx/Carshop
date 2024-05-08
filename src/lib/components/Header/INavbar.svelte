@@ -12,7 +12,7 @@
 			<img class="map" src="/icon/map.png" alt="" />Сургут</a
 		>
 		<a href="" class="navbar_img">Партнерские дилеры</a>
-		<a href="" class="navbar_img">Бренды авто</a>
+		<a href="/search" class="navbar_img">Бренды авто</a>
 		<div class="izb">
 			<a href=""><img class="ml-7" src="/images/love.jpg" alt="love" />
 			<div class="text">Избранное</div></a>

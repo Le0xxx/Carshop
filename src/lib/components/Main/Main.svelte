@@ -50,7 +50,7 @@
 		</div>
 	</div>
 	<div class="container mx-auto">
-		<h1 class="text">Посетите наший дилеров</h1>
+		<h1 id="target-text" class="text">Посетите наший дилеров</h1>
 		<div class="diler_grid">
 			{#each dilers as diler}
 				<Diler {diler} />

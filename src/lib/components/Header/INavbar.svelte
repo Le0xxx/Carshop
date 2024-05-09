@@ -1,11 +1,16 @@
-<script>
+<script >
 	import OverlayOpen from '../Overlay/OverlayOpen.svelte';
 	let isOpen = false;
-	let scrollToPosition = 1890;
-
-	function handleClick() {
-		window.scrollTo(0, scrollToPosition);
-	}
+	function scrollToText() {
+    const targetText = document.querySelector('#target-text');
+    if (targetText) {
+      const targetPosition = targetText.getBoundingClientRect().top + window.pageYOffset;
+      window.scrollTo({
+        top: targetPosition,
+        behavior: 'smooth'
+      });
+    }
+  }
 </script>
 
 <div class="navbar">
@@ -13,7 +18,7 @@
 		<a href="/" class="navbar_img"><h2>CARshop</h2></a>
 		<a href="https://yandex.ru/maps/973/surgut/?ll=73.393029%2C61.241780&z=12" class="navbar_img">
 			<img class="map" src="/icon/map.png" alt="" />Сургут</a>
-		<button on:click={handleClick} class="navbar_img">Партнерские дилеры</button>
+		<button on:click={scrollToText} class="navbar_img">Партнерские дилеры</button>
 		<a href="/search" class="navbar_img">Бренды авто</a>
 		<div class="izb">
 			<a href=""><img class="ml-7" src="/images/love.jpg" alt="love" />

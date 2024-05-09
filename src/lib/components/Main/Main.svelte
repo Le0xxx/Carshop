@@ -1,5 +1,4 @@
 <script>
-	// @ts-nocheck
 	import Auto from '../BestAuto/Auto.svelte';
 	import Diler from '../Dilers/Diler.svelte';
 	import { dilers } from '$lib/database/cars';
@@ -10,7 +9,7 @@
 
 <!-- svelte-ignore a11y-no-static-element-interactions -->
 <!-- svelte-ignore a11y-click-events-have-key-events -->
-	<div class="back" on:click={() => isOpen=false}>
+<div class="back" on:click={() => isOpen=false}>
 	<div class="container mx-auto -mt-4">
 		<header class="header">
 			<h1 class="text_img">Работаем более<br /> чем с 1000 дилерами<br /> по всей России</h1>
@@ -90,8 +89,8 @@
 						<p class="mb-2">Возврат</p>
 					</h2>
 					<p class="text_diler">
-						В случае если вам автомобиль не понравился или он вам не подходит, вы можете вернуть его нам в
-						течение 2 недель
+						В случае если вам автомобиль не понравился или он вам не подходит, вы можете вернуть его
+						нам в течение 2 недель
 					</p>
 				</div>
 			</div>
@@ -199,10 +198,10 @@
 		font-size: 22px;
 		margin-right: 15px;
 		@media (max-width: theme('screens.laptop')) {
-				font-size: 16px;
+			font-size: 16px;
 		}
 	}
-	img{
+	img {
 		width: 40px;
 		height: 40px;
 		border-radius: 0%;

@@ -1,5 +1,9 @@
 <script>
 	import Button from '../Common/Button.svelte';
+	let scrollToPosition = 1890;
+	function handleClick() {
+		window.scrollTo(0, scrollToPosition);
+	}
 </script>
 
 <div class="navbar">
@@ -8,7 +12,7 @@
 		<a href="https://yandex.ru/maps/973/surgut/?ll=73.393029%2C61.241780&z=12" class="navbar_img">
 			<img class="map" src="/icon/map.png" alt="" />Сургут</a
 		>
-		<a href="/" class="navbar_img">Партнерские дилеры</a>
+		<button on:click={handleClick} class="navbar_img">Партнерские дилеры</button>
 		<a href="/search" class="navbar_img">Бренды авто</a>
 		<div class="navbar_img">
 			<a href="/signup"><Button>Вход</Button></a>
@@ -47,13 +51,13 @@
 		margin: 5px 2px;
 	}
 	@media (max-width: theme('screens.laptop')) {
-		.container{
+		.container {
 			max-width: 900px;
 		}
 	}
-	img{
+	img {
 		width: 20px;
 		height: 20px;
-		border-radius:0%;
+		border-radius: 0%;
 	}
 </style>

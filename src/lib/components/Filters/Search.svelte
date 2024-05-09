@@ -1,7 +1,7 @@
 <script lang="ts">
 	let city = '';
-    import Auto from '../BestAuto/Auto.svelte';
-    import { cars } from '$lib/database/cars';
+	import Auto from '../BestAuto/Auto.svelte';
+	import { cars } from '$lib/database/cars';
 </script>
 
 <div class="back">
@@ -32,31 +32,31 @@
 			<h1 class="ml-4">Фильтры</h1>
 		</div>
 	</div>
-	<div class="blok mx-auto">
-		<td>
+	<div class="blok mx-auto flex">
+		<div class="field">
 			<input type="text" id="city" bind:value={city} placeholder="Марка" required />
 			<input type="text" id="city" bind:value={city} placeholder="Год от" required />
 			<input type="text" id="city" bind:value={city} placeholder="Цена от" required />
 			<input type="text" id="city" bind:value={city} placeholder="Двигатель" required />
-		</td>
-		<td>
+		</div>
+		<div class="field">
 			<input type="text" id="city" bind:value={city} placeholder="Цвет" required />
 			<input type="text" id="city" bind:value={city} placeholder="Привод" required />
 			<input type="text" id="city" bind:value={city} placeholder="Руль" required />
 			<input type="text" id="city" bind:value={city} placeholder="Модель" required />
-		</td>
-		<td>
+		</div>
+		<div class="field">
 			<input type="text" id="city" bind:value={city} placeholder="Пробег от" required />
 			<input type="text" id="city" bind:value={city} placeholder="Мощность" required />
 			<input type="text" id="city" bind:value={city} placeholder="Комплектация" required />
-		</td>
+		</div>
 	</div>
 	<div class="changes mx-auto"><div class="mx-auto text-lg">Поиск</div></div>
 	<div class="block2 mx-auto">
 		<div class="text">
 			<h1 class="ml-9">Результат</h1>
 		</div>
-        <div class="car_grid">
+		<div class="car_grid">
 			{#each cars as car}
 				<Auto {car} />
 			{/each}
@@ -65,6 +65,9 @@
 </div>
 
 <style lang="scss">
+	.field{
+		width: 410px;
+	}
 	.mark {
 		margin-bottom: 10px;
 	}
@@ -78,7 +81,7 @@
 	}
 	.blok {
 		height: 370px;
-		width: 1270px;
+		width: 1230px;
 		background-color: white;
 		border-radius: 30px;
 	}
@@ -95,6 +98,7 @@
 		margin-bottom: 5px;
 		margin-top: 30px;
 		margin-left: 20px;
+		margin-right: 10px;
 	}
 	.changes {
 		display: flex;
@@ -111,7 +115,7 @@
 	.block2 {
 		width: 1300px;
 	}
-    .car_grid {
+	.car_grid {
 		display: grid;
 		grid-template-columns: repeat(4, 1fr);
 		@media (max-width: theme('screens.desktop')) {

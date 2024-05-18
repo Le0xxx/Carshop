@@ -1,12 +1,18 @@
+<script>
+	import Carousel from '../Common/Carousel.svelte';
+	let images = [
+		{ src: '/card/photo1.png', alt: 'Image 1' },
+		{ src: '/card/photo2.png', alt: 'Image 2' },
+		{ src: '/card/photo3.png', alt: 'Image 3' },
+		{ src: '/card/photo4.png', alt: 'Image 4' }
+	];
+</script>
+
 <div class="back">
 	<div class="leviy_con ml-auto">
 		<div class="info font-semibold ml-12 mt-4">BMW M5, 2019 год</div>
-		<img class="photo mx-auto mt-3" src="/card/photo1.png" alt="car" />
-		<div class="flex">
-			<img class="mini_photo ml-auto mt-3" src="/card/photo2.png" alt="car" />
-			<img class="mini_photo ml-3 mt-3" src="/card/photo3.png" alt="car" />
-			<img class="mini_photo ml-3 mt-3" src="/card/photo4.png" alt="car" />
-			<img class="mini_photo ml-3 mr-auto mt-3" src="/card/photo5.png" alt="car" />
+		<div class="photo mx-auto mt-3">
+			<Carousel {images} />
 		</div>
 	</div>
 	<div class="praviy_con mr-auto">
@@ -42,16 +48,17 @@
 		</div>
 	</div>
 </div>
+
 <style tang="scss">
 	.leviy_con {
-		height: 600px;
+		height: 580px;
 		width: 730px;
 		background-color: white;
 		border-radius: 30px;
 		margin-right: 25px;
 	}
 	.praviy_con {
-		height: 600px;
+		height: 580px;
 		width: 500px;
 		background-color: white;
 		border-radius: 30px;
@@ -93,9 +100,7 @@
 	}
 	.photo {
 		width: 680px;
-		height: 420px;
+		height: 400px;
 	}
-	.mini_photo {
-		width: 160px;
-	}
+
 </style>

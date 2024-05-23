@@ -233,6 +233,8 @@
 		position: absolute;
 		top: 90px;
 		margin-left: 100px;
+		background-image: url('/man.png');
+		background-size: cover;
 	}
 	.changes {
 		display: flex;

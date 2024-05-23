@@ -1,11 +1,18 @@
 <script lang="ts">
 	import Auto from '../BestAuto/Auto.svelte';
 	import { cars } from '$lib/database/cars';
-	let name = '';
-	let email = '';
-	let country = '';
-	let city = '';
-	let phone = '';
+	let userInputs = {
+		name: '',
+		email: '',
+		country: '',
+		city: '',
+		phone: ''
+  };
+	//let name = '';
+	//let email = '';
+	//let country = '';
+	//let city = '';
+	//let phone = '';
 	import { onMount } from 'svelte';
 
 	let fileUploader: HTMLInputElement | null = null;
@@ -47,6 +54,26 @@
       imageGrid.removeChild(imageGrid.firstChild);
     }
   }
+  function saveUserData() {
+    if (typeof localStorage !== 'undefined') {
+      localStorage.setItem('userInputs', JSON.stringify(userInputs));
+    }
+  }
+
+  function loadData() {
+    if (typeof localStorage !== 'undefined') {
+      const storedInputs = localStorage.getItem('userInputs');
+      if (storedInputs) {
+        userInputs = JSON.parse(storedInputs);
+      }
+    }
+  }
+  $: {
+    if (typeof localStorage !== 'undefined') {
+      saveUserData();
+    }
+  }
+  loadData();
 </script>
 
 <body>
@@ -74,17 +101,17 @@
 				<input
 					type="text"
 					id="name"
-					bind:value={name}
+					bind:value={userInputs.name}
 					placeholder="Введите фамилия и имя.."
 					required
 				/>
 				<label for="email" class="font-semibold ml-4">Email</label>
-				<input type="email" id="email" bind:value={email} placeholder="Введите email.." required />
+				<input type="email" id="email" bind:value={userInputs.email} placeholder="Введите email.." required />
 				<label for="phone" class="font-semibold ml-4">Телефон</label>
 				<input
 					type="number"
 					id="phone"
-					bind:value={phone}
+					bind:value={userInputs.phone}
 					placeholder="Введите номер телефона.."
 					required
 				/>
@@ -92,15 +119,15 @@
 				<input
 					type="text"
 					id="country"
-					bind:value={country}
+					bind:value={userInputs.country}
 					placeholder="Укажите страну.."
 					required
 				/>
 				<label for="city" class="font-semibold ml-4">Город</label>
-				<input type="text" id="city" bind:value={city} placeholder="Укажите город.." required />
+				<input type="text" id="city" bind:value={userInputs.city} placeholder="Укажите город.." required />
 			</div>
 		</div>
-		<div class="changes mx-auto"><div class="mx-auto text-lg">Сохранить изменения</div></div>
+		<button class="changes mx-auto" on:click={saveUserData}><div class="mx-auto text-lg">Сохранить изменения</div></button>
 		<h1 class="text">Избранное</h1>
 		<div class="car_grid">
 			{#each cars as car}

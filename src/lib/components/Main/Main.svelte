@@ -5,6 +5,7 @@
 	import { cars } from '$lib/database/cars';
 	import OverlayOpen from '../Overlay/OverlayOpen.svelte';
 	let isOpen = false;
+	
 </script>
 
 <!-- svelte-ignore a11y-no-static-element-interactions -->
@@ -37,7 +38,7 @@
 				<h2 class="mark"><button>Ford</button></h2>
 				<h2 class="mark"><button>Hawal</button></h2>
 				<h2 class="mark"><button>Honda</button></h2>
-				<h2 class="mark"><button>Показать всё</button></h2>
+				<h2 class="mark"><button id="button">Показать всё</button></h2>
 			</td>
 		</div>
 	</div>

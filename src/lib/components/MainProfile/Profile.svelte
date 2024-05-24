@@ -234,7 +234,8 @@
 		top: 90px;
 		margin-left: 100px;
 		background-image: url('/man.png');
-		background-size: cover;
+		background-repeat: no-repeat;
+		background-position:5ch;
 	}
 	.changes {
 		display: flex;

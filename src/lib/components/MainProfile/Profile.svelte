@@ -131,7 +131,7 @@
 		<h1 class="text">Избранное</h1>
 		<div class="car_grid">
 			{#each cars as car}
-				<Auto {car} />
+				<a href="/car-{car.id}"><Auto {car} /></a>
 			{/each}
 		</div>
 	</div>

@@ -18,8 +18,13 @@
       {/if}
     {/each}
     <div class="carousel-buttons">
-      <button  on:click={() => prevImage()}><div class="arr left"></div></button>
-      <button  on:click={() => nextImage()}><div class="arr right"></div></button>
+      <div class="button_radius-colour">
+        <button  on:click={() => prevImage()}><div class="arr left"></div></button>
+      </div>
+
+      <div class="button_radius-colour">
+        <button  on:click={() => nextImage()}><div class="arr right"></div></button>
+      </div>
     </div>
   </div>
   <style>
@@ -29,26 +34,35 @@
         height: 500px;
     }
     .carousel-buttons{
-        width: 660px;
-        position: absolute;
-        display: flex;
-        justify-content: space-between;
-        margin-left: 10px;
-        margin-right: 10px;
-        bottom: 545px;
+      width: 650px;
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      margin-left: 14px;
+      bottom: 260px;
     }
     .right{
-        height: 18px;
-        width: 18px;
-        border-top: 3px solid #c4c1c1;
-        border-left: 3px solid #c4c1c1;
+        height: 22px;
+        width: 22px;
+        border-top: 4px solid black;
+        border-left: 4px solid black;
         transform: rotate(135deg); 
+        
     }
     .left{
-        height: 18px;
-        width: 18px;
-        border-top: 3px solid #c4c1c1;
-        border-left: 3px solid #c4c1c1;
+        height: 22px;
+        width: 22px;
+        border-top: 4px solid black;
+        border-left: 4px solid black;
         transform: rotate(-45deg);
+    }
+    .button_radius-colour{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 50px;
+        width: 46px;
+        border-radius: 20px;
+        background-color: rgba(255, 255, 255, 0.522);
     }
   </style>

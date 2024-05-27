@@ -35,18 +35,15 @@
 	<div class="blok mx-auto flex">
 		<div class="field">
 			<input type="text" id="city" bind:value={city} placeholder="Марка" required />
-			<input type="text" id="city" bind:value={city} placeholder="Год от" required />
 		</div>
 		<div class="field">
-			<input type="text" id="city" bind:value={city} placeholder="Цвет" required />
 			<input type="text" id="city" bind:value={city} placeholder="Цена от" required />
 		</div>
 		<div class="field">
-			<input type="text" id="city" bind:value={city} placeholder="Пробег от" required />
-			<input type="text" id="city" bind:value={city} placeholder="Привод" required />
+			<input type="text" id="city" bind:value={city} placeholder="Год от" required />
 		</div>
 	</div>
-	<div class="changes mx-auto"><div class="mx-auto text-lg">Поиск</div></div>
+	<button class="changes mx-auto"><div class="mx-auto text-lg">Поиск</div></button>
 	<div class="block2 mx-auto">
 		<div class="text">
 			<h1 class="ml-9">Результат</h1>
@@ -75,7 +72,7 @@
 		min-height: 899px;
 	}
 	.blok {
-		height: 220px;
+		height: 130px;
 		width: 1230px;
 		background-color: white;
 		border-radius: 30px;
@@ -98,7 +95,7 @@
 	.changes {
 		display: flex;
 		height: 40px;
-		width: 220px;
+		width: 180px;
 		background-color: rgb(194, 7, 7);
 		align-items: center;
 		border-radius: 30px;

@@ -5,7 +5,7 @@
 	import { cars } from '$lib/database/cars';
 	import OverlayOpen from '../Overlay/OverlayOpen.svelte';
 	let isOpen = false;
-	
+	let limitedCars = cars.slice(0, 8);
 </script>
 
 <!-- svelte-ignore a11y-no-static-element-interactions -->
@@ -45,7 +45,7 @@
 	<div class="container mx-auto">
 		<h1 class="text">Лучшая цена</h1>
 		<div class="car_grid">
-			{#each cars as car}
+			{#each limitedCars as car}
 				<a href="/car-{car.id}"><Auto {car} /></a>
 			{/each}
 		</div> 

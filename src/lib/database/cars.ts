@@ -65,7 +65,7 @@ export const cars:Array<Cars> = [
         "wheel": "левый",
         "cequipment": "standart. 3.5l",
         "transmission": "AWD",
-        "engine": "ebnytiyoleg 3.5 L, авиационное топливо",
+        "engine": "ebnytiyoleg 3.5 L",
         "name": "Toyota Camry, 2015",
         "price": "2 000 000 рублей",
         "photo1":"https://www.coches.com/fotos_historicas/toyota/Camry-SE-2015/toyota_camry-se-2014_r4.jpg",

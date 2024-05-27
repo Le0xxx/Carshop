@@ -27,7 +27,7 @@
       </div>
     </div>
   </div>
-  <style>
+  <style> 
     img{
         border-radius: 30px;
         width: 680px;
@@ -44,16 +44,16 @@
     .right{
         height: 22px;
         width: 22px;
-        border-top: 4px solid black;
-        border-left: 4px solid black;
+        border-top: 4px solid rgb(194, 189, 189);
+        border-left: 4px solid rgb(194, 189, 189);
         transform: rotate(135deg); 
         
     }
     .left{
         height: 22px;
         width: 22px;
-        border-top: 4px solid black;
-        border-left: 4px solid black;
+        border-top: 4px solid rgb(194, 189, 189);
+        border-left: 4px solid rgb(194, 189, 189);
         transform: rotate(-45deg);
     }
     .button_radius-colour{
@@ -63,6 +63,5 @@
         height: 50px;
         width: 46px;
         border-radius: 20px;
-        background-color: rgba(255, 255, 255, 0.522);
     }
   </style>

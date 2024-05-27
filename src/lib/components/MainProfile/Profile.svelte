@@ -74,6 +74,7 @@
     }
   }
   loadData();
+  let limitedCars = cars.slice(0, 6);
 </script>
 
 <body>
@@ -128,9 +129,9 @@
 			</div>
 		</div>
 		<button class="changes mx-auto" on:click={saveUserData}><div class="mx-auto text-lg">Сохранить изменения</div></button>
-		<h1 class="text">Избранное</h1>
+		<h1 id="target" class="text">Избранное</h1>
 		<div class="car_grid">
-			{#each cars as car}
+			{#each limitedCars as car}
 				<a href="/car-{car.id}"><Auto {car} /></a>
 			{/each}
 		</div>

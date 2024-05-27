@@ -1,16 +1,24 @@
-<script>
+<script lang="ts">
+
+	export let car;
+	let image1 = car.photo1;
+	let image2 = car.photo2;
+	let image3 = car.photo3;
+	let image4 = car.photo4;
+
 	import Carousel from '../Common/Carousel.svelte';
 	let images = [
-		{ src: '/card/photo1.png', alt: 'Image 1' },
-		{ src: '/card/photo2.png', alt: 'Image 2' },
-		{ src: '/card/photo3.png', alt: 'Image 3' },
-		{ src: '/card/photo4.png', alt: 'Image 4' }
+		{src: image1, alt: 'Image 1'},
+		{src: image2, alt: 'Image 2'},
+		{src: image3, alt: 'Image 3'},
+		{src: image4, alt: 'Image 4'},
 	];
+
 </script>
 
 <div class="back">
 	<div class="leviy_con ml-auto">
-		<div class="info font-semibold ml-12 mt-4">BMW M5, 2019 год</div>
+		<div class="info font-semibold font-size ml-12 mt-5 ">{car.name}</div>
 		<div class="photo mx-auto mt-3">
 			<Carousel {images} />
 		</div>
@@ -34,22 +42,24 @@
 			</div>
 			<div class="block2">
 				<div class="grid ml-7 gap-4 mt-3">
-					<span class="info font-semibold">845 л.с</span>
-					<span class="info font-semibold">82223 км.</span>
-					<span class="info font-semibold">седан</span>
-					<span class="info font-semibold">синий</span>
-					<span class="info font-semibold">левый</span>
-					<span class="info font-semibold">4.4 AT M5 Competition</span>
-					<span class="info font-semibold">4 WD</span>
-					<span class="info font-semibold">бензин, 4.4 л</span>
-					<span class="info font-semibold mt-9">9 999 999 руб</span>
+					<span class="info font-semibold">{car.HP}</span>
+					<span class="info font-semibold">{car.covdist}</span>
+					<span class="info font-semibold">{car.body}</span>
+					<span class="info font-semibold">{car.colour}</span>
+					<span class="info font-semibold">{car.wheel}</span>
+					<span class="info font-semibold">{car.cequipment}</span>
+					<span class="info font-semibold">{car.transmission}</span>
+					<span class="info font-semibold">{car.engine}</span>
+					<span class="info font-semibold mt-9">{car.price}</span>
 				</div>
 			</div>
 		</div>
 	</div>
 </div>
 
+
 <style tang="scss">
+	
 	.leviy_con {
 		height: 580px;
 		width: 730px;
@@ -94,9 +104,6 @@
 	}
 	.info {
 		font-size: 20px;
-	}
-	img {
-		border-radius: 0;
 	}
 	.photo {
 		width: 680px;

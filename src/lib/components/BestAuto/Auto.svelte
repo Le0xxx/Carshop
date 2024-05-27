@@ -4,7 +4,7 @@
 </script>
 <div class="containers">
 <div>
-    <img  class="car-card" src="{car.photo}" alt="">
+    <img  class="car-card" src="{car.photo1}" alt="">
 </div>
 <div class="mx-4 mt-3 font-semibold">{car.name}</div>
 <div class="mx-4 mt-1">{car.price}</div>

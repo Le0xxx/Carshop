@@ -36,19 +36,14 @@
 		<div class="field">
 			<input type="text" id="city" bind:value={city} placeholder="Марка" required />
 			<input type="text" id="city" bind:value={city} placeholder="Год от" required />
-			<input type="text" id="city" bind:value={city} placeholder="Цена от" required />
-			<input type="text" id="city" bind:value={city} placeholder="Двигатель" required />
 		</div>
 		<div class="field">
 			<input type="text" id="city" bind:value={city} placeholder="Цвет" required />
-			<input type="text" id="city" bind:value={city} placeholder="Привод" required />
-			<input type="text" id="city" bind:value={city} placeholder="Руль" required />
-			<input type="text" id="city" bind:value={city} placeholder="Модель" required />
+			<input type="text" id="city" bind:value={city} placeholder="Цена от" required />
 		</div>
 		<div class="field">
 			<input type="text" id="city" bind:value={city} placeholder="Пробег от" required />
-			<input type="text" id="city" bind:value={city} placeholder="Мощность" required />
-			<input type="text" id="city" bind:value={city} placeholder="Комплектация" required />
+			<input type="text" id="city" bind:value={city} placeholder="Привод" required />
 		</div>
 	</div>
 	<div class="changes mx-auto"><div class="mx-auto text-lg">Поиск</div></div>
@@ -58,7 +53,7 @@
 		</div>
 		<div class="car_grid">
 			{#each cars as car}
-				<Auto {car} />
+				<a href="/car-{car.id}"><Auto {car} /></a>
 			{/each}
 		</div>
 	</div>
@@ -80,7 +75,7 @@
 		min-height: 899px;
 	}
 	.blok {
-		height: 370px;
+		height: 220px;
 		width: 1230px;
 		background-color: white;
 		border-radius: 30px;

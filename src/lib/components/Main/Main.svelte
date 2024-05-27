@@ -46,12 +46,12 @@
 		<h1 class="text">Лучшая цена</h1>
 		<div class="car_grid">
 			{#each cars as car}
-				<a href="/car"><Auto {car} /></a>
+				<a href="/car-{car.id}"><Auto {car} /></a>
 			{/each}
 		</div> 
 	</div>
 	<div class="container mx-auto">
-		<h1 id="target-text" class="text">Посетите наший дилеров</h1>
+		<h1 id="target-text" class="text">Посетите наших дилеров</h1>
 		<div class="diler_grid">
 			{#each dilers as diler}
 				<Diler {diler} />

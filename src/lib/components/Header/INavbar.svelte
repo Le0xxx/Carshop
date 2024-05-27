@@ -1,16 +1,26 @@
-<script >
+<script>
 	import OverlayOpen from '../Overlay/OverlayOpen.svelte';
 	let isOpen = false;
 	function scrollToText() {
-    const targetText = document.querySelector('#target-text');
-    if (targetText) {
-      const targetPosition = targetText.getBoundingClientRect().top + window.pageYOffset;
-      window.scrollTo({
-        top: targetPosition,
-        behavior: 'smooth'
-      });
-    }
-  }
+		const targetText = document.querySelector('#target-text');
+		if (targetText) {
+			const targetPosition = targetText.getBoundingClientRect().top + window.pageYOffset;
+			window.scrollTo({
+				top: targetPosition,
+				behavior: 'smooth'
+			});
+		}
+	}
+	function scrollText() {
+		const target = document.querySelector('#target');
+		if (target) {
+			const targetPosition = target.getBoundingClientRect().top + window.pageYOffset;
+			window.scrollTo({
+				top: targetPosition,
+				behavior: 'smooth'
+			});
+		}
+	}
 </script>
 
 <div class="navbar">
@@ -21,12 +31,13 @@
 		<button on:click={scrollToText} class="navbar_img">Партнерские дилеры</button>
 		<a href="/search" class="navbar_img">Бренды авто</a>
 		<div class="izb">
-			<a href=""><img class="ml-7" src="/images/love.jpg" alt="love" />
-				<div class="text">Избранное</div>
-			</a>
+			<button on:click={scrollText} class="text"
+				><img class="ml-7" src="/images/love.jpg" alt="love" />
+				Избранное</button>
 		</div>
 		<div class="izb">
-			<a href=""><img class="ml-12" src="/images/what.png" alt="love" />
+			<a href=""
+				><img class="ml-12" src="/images/what.png" alt="love" />
 				<div class="text">Мои объявления</div>
 			</a>
 		</div>

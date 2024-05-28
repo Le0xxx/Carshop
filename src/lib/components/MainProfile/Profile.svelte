@@ -79,9 +79,9 @@
 
 <body>
 	<div class="max-w-5xl mx-auto">
-		<div class="main">
+		<div class="main mx-auto">
 			<div class="block">
-				<div class="field" id="image-grid" />
+				<div class="field mx-auto" id="image-grid" />
 				<label class="label mx-auto" for="file-uploader">
 					<div class="mx-auto">
 						<img class="photo" src="\images\photo.png" alt="" />Загрузить фото
@@ -97,6 +97,7 @@
 				/>
 				<button class="delete" id="remove-image" on:click={handleRemoveImage}>Удалить</button>
 			</div>
+			<div class="block2">
 			<div class="tabs">
 				<label for="name" class="font-semibold ml-4">Фамилия и имя:</label>
 				<input
@@ -128,6 +129,7 @@
 				<input type="text" id="city" bind:value={userInputs.city} placeholder="Укажите город.." required />
 			</div>
 		</div>
+	</div>
 		<button class="changes mx-auto" on:click={saveUserData}><div class="mx-auto text-lg">Сохранить изменения</div></button>
 		<h1 id="target" class="text">Избранное</h1>
 		<div class="car_grid">
@@ -140,7 +142,7 @@
 
 <style lang="scss">
 	.main {
-		width: 1000px;
+		max-width: 1000px;
 		height: 700px;
 		background-color: white;
 		border-radius: 30px;
@@ -148,7 +150,7 @@
 		border-color: black;
 		position: relative;
 		top: 40px;
-		display: grid;
+		display: flex;
 	}
 	body {
 		background: rgb(230, 229, 229);
@@ -178,12 +180,9 @@
 		}
 	}
 	.tabs {
-		margin-left: 5px;
-		margin-right: 5px;
+		margin-left: 15px;
 		margin-top: 80px;
-		width: 400px;
-		position: absolute;
-		right: 80px;
+		max-width: 410px;
 	}
 	input[type='text'],
 	input[type='email'],
@@ -206,8 +205,6 @@
 		font-size: 16px;
 		line-height: 20px;
 		color: white;
-		position: relative;
-		top: 415px;
 	}
 	.photo {
 		text-align: center;
@@ -222,6 +219,11 @@
 	.block {
 		height: 700px;
 		width: 500px;
+		display: grid;
+	}
+	.block2 {
+		height: 700px;
+		width: 500px;
 	}
 	.field {
 		display: flex;
@@ -230,13 +232,10 @@
 		border-radius: 50%;
 		border-width: 1px;
 		border-color: black;
-		margin-left: 20px;
-		position: absolute;
-		top: 90px;
-		margin-left: 100px;
 		background-image: url('/man.png');
 		background-repeat: no-repeat;
 		background-position:5ch;
+		margin-top: 90px;
 	}
 	.changes {
 		display: flex;
@@ -257,8 +256,8 @@
 		border-radius: 30px;
 		font-size: 18px;
 		color: white;
-		position: relative;
-		top: 445px;
-		left: 162px;
+		margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 105px;
 	}
 </style>

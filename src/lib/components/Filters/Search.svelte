@@ -3,23 +3,35 @@
 	let years = '';
 	import Auto from '../BestAuto/Auto.svelte';
 	import { cars } from '$lib/database/cars';
+	function filterCars(mark) {
+    	if (mark === 'all') {
+      		filteredCars = cars;
+    	} else {
+      		filteredCars = cars.filter(car => car.mark === mark);
+    	}
+  }
+
+	  function handleClick(event) {
+	    const mark = event.target.dataset.id;
+	    selectedMark = mark;
+	    filterCars(mark);
+	  }
 </script>
 
-
 <div class="back">
-	<div class="zadnik mx-auto">
-		<h1 class="ml-4">Найди свой идеальный автомобиль</h1>
-		<div class="list">
-			<botton class="list_item active" data-id="all" on:click={mark = null}>Все марки</botton>
-			<botton class="list_item" data-id="Volkswagen" on:click={mark = Volkswagen}>Volkswagen</botton>
-			<botton class="list_item" data-id="Toyota" on:click={mark = Toyota}>Toyota</bottob>
-			<botton class="list_item" data-id="Nissan" on:click={mark = Nissan}>Nissan</botton>
-			<botton class="list_item" data-id="Lexus" on:click={mark = Lexus}>Lexus</botton>
-			<botton class="list_item" data-id="Opel" on:click={mark = Opel}>Opel</botton>
-			<botton class="list_item" data-id="Changan" on:click={mark = Changan}>Changan</botton>
-			<botton class="list_item" data-id="Kia" on:click={mark = Kia}>Kia</botton>
-			<botton class="list_item" data-id="Лада" on:click={mark = Лада}>Лада</botton>
-			<botton class="list_item" data-id="Mitsubishi" on:click={mark = Mitsubishi}>Mitsubishi</botton>
+  <div class="zadnik mx-auto">
+    <h1 class="ml-4">Найди свой идеальный автомобиль</h1>
+    <div class="list">
+      <button class="list_item active" data-id="all" on:click={handleClick}>Все марки</button>
+      <button class="list_item" data-id="Volkswagen" on:click={handleClick}>Volkswagen</button>
+      <button class="list_item" data-id="Toyota" on:click={handleClick}>Toyota</button>
+      <button class="list_item" data-id="Nissan" on:click={handleClick}>Nissan</button>
+      <button class="list_item" data-id="Lexus" on:click={handleClick}>Lexus</button>
+      <button class="list_item" data-id="Opel" on:click={handleClick}>Opel</button>
+      <button class="list_item" data-id="Changan" on:click={handleClick}>Changan</button>
+      <button class="list_item" data-id="Kia" on:click={handleClick}>Kia</button>
+      <button class="list_item" data-id="Лада" on:click={handleClick}>Лада</button>
+      <button class="list_item" data-id="Mitsubishi" on:click={handleClick}>Mitsubishi</button>
 		</div>
 	</div>
 	<div class="block2 mx-auto">

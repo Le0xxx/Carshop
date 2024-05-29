@@ -10,23 +10,23 @@
 	<div class="zadnik mx-auto">
 		<h1 class="ml-4">Найди свой идеальный автомобиль</h1>
 		<div class="list">
-			<h2 class="list_item active" data-id="all">Все марки</h2>
-			<h2 class="list_item" data-id="Volkswagen">Volkswagen</h2>
-			<h2 class="list_item" data-id="Toyota">Toyota</h2>
-			<h2 class="list_item" data-id="Nissan">Nissan</h2>
-			<h2 class="list_item" data-id="Lexus">Lexus</h2>
-			<h2 class="list_item" data-id="Opel">Opel</h2>
-			<h2 class="list_item" data-id="Changan">Changan</h2>
-			<h2 class="list_item" data-id="Kia">Kia</h2>
-			<h2 class="list_item" data-id="Лада">Лада</h2>
-			<h2 class="list_item" data-id="Mitsubishi">Mitsubishi</h2>
+			<botton class="list_item active" data-id="all">Все марки</botton>
+			<botton class="list_item" data-id="Volkswagen">Volkswagen</botton>
+			<botton class="list_item" data-id="Toyota">Toyota</bottob>
+			<botton class="list_item" data-id="Nissan">Nissan</botton>
+			<botton class="list_item" data-id="Lexus">Lexus</botton>
+			<botton class="list_item" data-id="Opel">Opel</botton>
+			<botton class="list_item" data-id="Changan">Changan</botton>
+			<botton class="list_item" data-id="Kia">Kia</botton>
+			<botton class="list_item" data-id="Лада">Лада</botton>
+			<botton class="list_item" data-id="Mitsubishi">Mitsubishi</botton>
 		</div>
 	</div>
 	<div class="block2 mx-auto">
 		<div class="text">
 			<h1 class="ml-9">Результат</h1>
 		</div>
-		<div class="blocks">
+		<div class="car_grid">
 			{#each cars as car}
 				<a href="/car-{car.id}"><Auto {car} /></a>
 			{/each}
@@ -97,8 +97,5 @@
 		@media (max-width: theme('screens.tablet')) {
 			grid-template-columns: 1fr;
 		}
-	}
-	.hide {
-		opacity: 1;
 	}
 </style>

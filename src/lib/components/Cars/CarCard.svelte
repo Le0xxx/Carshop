@@ -18,7 +18,7 @@
 
 <div class="back">
 	<div class="leviy_con ml-auto">
-		<div class="info font-semibold font-size ml-12 mt-5 ">{car.name}</div>
+		<div class="info font-semibold font-size ml-12 mt-5 ">{car.mark} {car.name}, {car.years}</div>
 		<div class="photo mx-auto mt-3">
 			<Carousel {images} />
 		</div>

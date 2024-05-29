@@ -2,11 +2,11 @@
     import type {Cars} from '$lib/database/cars';
     export let car:Cars;
 </script>
-<div class="containers">
+<div class="blocks_item {car.mark}">
 <div>
     <img  class="car-card" src="{car.photo1}" alt="">
 </div>
-<div class="mx-4 mt-3 font-semibold">{car.name}</div>
+<div class="mx-4 mt-1">{car.mark} {car.name}, {car.years}</div>
 <div class="mx-4 mt-1">{car.price}</div>
 <div class="mx-3 mt-1"><img class="map" src="/icon/map.png" alt="">Сургут</div>
 </div>
@@ -16,7 +16,7 @@
         border-top-left-radius: 30px;
 		border-top-right-radius:30px;
     }
-    .containers{
+    .block_item{
         height: 330px;
         width: 300px;
         background-color: white;

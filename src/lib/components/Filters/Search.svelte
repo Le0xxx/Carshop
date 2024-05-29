@@ -1,54 +1,32 @@
 <script lang="ts">
-	let city = '';
+	let mark = '';
+	let years = '';
 	import Auto from '../BestAuto/Auto.svelte';
 	import { cars } from '$lib/database/cars';
 </script>
 
+
 <div class="back">
 	<div class="zadnik mx-auto">
-		<div class="text">
-			<h1 class="ml-4">Найди свой идеальный автомобиль</h1>
-			<td width="570px">
-				<h2 class="mark"><button>Acura</button></h2>
-				<h2 class="mark"><button>Audi</button></h2>
-				<h2 class="mark"><button>Bently</button></h2>
-				<h2 class="mark"><button>BMW</button></h2>
-				<h2 class="mark"><button>Bugatti</button></h2>
-			</td>
-			<td width="500px">
-				<h2 class="mark"><button>Cadillac</button></h2>
-				<h2 class="mark"><button>Cherry</button></h2>
-				<h2 class="mark"><button>Chevrolet</button></h2>
-				<h2 class="mark"><button>Citroen</button></h2>
-				<h2 class="mark"><button>Dodge</button></h2>
-			</td>
-			<td width="200px">
-				<h2 class="mark"><button>Ferrari</button></h2>
-				<h2 class="mark"><button>Ford</button></h2>
-				<h2 class="mark"><button>Hawal</button></h2>
-				<h2 class="mark"><button>Honda</button></h2>
-				<h2 class="mark"><button>Показать всё</button></h2>
-			</td>
-			<h1 class="ml-4">Фильтры</h1>
+		<h1 class="ml-4">Найди свой идеальный автомобиль</h1>
+		<div class="list">
+			<h2 class="list_item active" data-id="all">Все марки</h2>
+			<h2 class="list_item" data-id="Volkswagen">Volkswagen</h2>
+			<h2 class="list_item" data-id="Toyota">Toyota</h2>
+			<h2 class="list_item" data-id="Nissan">Nissan</h2>
+			<h2 class="list_item" data-id="Lexus">Lexus</h2>
+			<h2 class="list_item" data-id="Opel">Opel</h2>
+			<h2 class="list_item" data-id="Changan">Changan</h2>
+			<h2 class="list_item" data-id="Kia">Kia</h2>
+			<h2 class="list_item" data-id="Лада">Лада</h2>
+			<h2 class="list_item" data-id="Mitsubishi">Mitsubishi</h2>
 		</div>
 	</div>
-	<div class="blok mx-auto flex">
-		<div class="field">
-			<input type="text" id="city" bind:value={city} placeholder="Марка" required />
-		</div>
-		<div class="field">
-			<input type="text" id="city" bind:value={city} placeholder="Цена от" required />
-		</div>
-		<div class="field">
-			<input type="text" id="city" bind:value={city} placeholder="Год от" required />
-		</div>
-	</div>
-	<button class="changes mx-auto"><div class="mx-auto text-lg">Поиск</div></button>
 	<div class="block2 mx-auto">
 		<div class="text">
 			<h1 class="ml-9">Результат</h1>
 		</div>
-		<div class="car_grid">
+		<div class="blocks">
 			{#each cars as car}
 				<a href="/car-{car.id}"><Auto {car} /></a>
 			{/each}
@@ -60,7 +38,7 @@
 	.field{
 		width: 410px;
 	}
-	.mark {
+	.list_item {
 		margin-bottom: 10px;
 	}
 	.text {
@@ -119,5 +97,8 @@
 		@media (max-width: theme('screens.tablet')) {
 			grid-template-columns: 1fr;
 		}
+	}
+	.hide {
+		opacity: 1;
 	}
 </style>

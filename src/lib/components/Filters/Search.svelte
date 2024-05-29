@@ -10,16 +10,16 @@
 	<div class="zadnik mx-auto">
 		<h1 class="ml-4">Найди свой идеальный автомобиль</h1>
 		<div class="list">
-			<botton class="list_item active" data-id="all">Все марки</botton>
-			<botton class="list_item" data-id="Volkswagen">Volkswagen</botton>
-			<botton class="list_item" data-id="Toyota">Toyota</bottob>
-			<botton class="list_item" data-id="Nissan">Nissan</botton>
-			<botton class="list_item" data-id="Lexus">Lexus</botton>
-			<botton class="list_item" data-id="Opel">Opel</botton>
-			<botton class="list_item" data-id="Changan">Changan</botton>
-			<botton class="list_item" data-id="Kia">Kia</botton>
-			<botton class="list_item" data-id="Лада">Лада</botton>
-			<botton class="list_item" data-id="Mitsubishi">Mitsubishi</botton>
+			<botton class="list_item active" data-id="all" on:click={mark = null}>Все марки</botton>
+			<botton class="list_item" data-id="Volkswagen" on:click={mark = Volkswagen}>Volkswagen</botton>
+			<botton class="list_item" data-id="Toyota" on:click={mark = Toyota}>Toyota</bottob>
+			<botton class="list_item" data-id="Nissan" on:click={mark = Nissan}>Nissan</botton>
+			<botton class="list_item" data-id="Lexus" on:click={mark = Lexus}>Lexus</botton>
+			<botton class="list_item" data-id="Opel" on:click={mark = Opel}>Opel</botton>
+			<botton class="list_item" data-id="Changan" on:click={mark = Changan}>Changan</botton>
+			<botton class="list_item" data-id="Kia" on:click={mark = Kia}>Kia</botton>
+			<botton class="list_item" data-id="Лада" on:click={mark = Лада}>Лада</botton>
+			<botton class="list_item" data-id="Mitsubishi" on:click={mark = Mitsubishi}>Mitsubishi</botton>
 		</div>
 	</div>
 	<div class="block2 mx-auto">

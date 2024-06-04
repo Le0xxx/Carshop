@@ -22,16 +22,16 @@
   <div class="zadnik mx-auto">
     <h1 class="ml-4">Найди свой идеальный автомобиль</h1>
     <div class="list">
-      <button class="list_item active" data-id="all" on:click={handleClick}>Все марки</button>
-      <button class="list_item" data-id="Volkswagen" on:click={handleClick}>Volkswagen</button>
-      <button class="list_item" data-id="Toyota" on:click={handleClick}>Toyota</button>
-      <button class="list_item" data-id="Nissan" on:click={handleClick}>Nissan</button>
-      <button class="list_item" data-id="Lexus" on:click={handleClick}>Lexus</button>
-      <button class="list_item" data-id="Opel" on:click={handleClick}>Opel</button>
-      <button class="list_item" data-id="Changan" on:click={handleClick}>Changan</button>
-      <button class="list_item" data-id="Kia" on:click={handleClick}>Kia</button>
-      <button class="list_item" data-id="Лада" on:click={handleClick}>Лада</button>
-      <button class="list_item" data-id="Mitsubishi" on:click={handleClick}>Mitsubishi</button>
+      <h2 class="list_item active" data-id="all" on:click={handleClick}><>Все марки</h2>
+      <h2 class="list_item" data-id="Volkswagen" on:click={handleClick}>Volkswagen</h2>
+      <h2 class="list_item" data-id="Toyota" on:click={handleClick}>Toyota</h2>
+      <h2 class="list_item" data-id="Nissan" on:click={handleClick}>Nissan</h2>
+      <h2 class="list_item" data-id="Lexus" on:click={handleClick}>Lexus</h2>
+      <h2 class="list_item" data-id="Opel" on:click={handleClick}>Opel</h2>
+      <h2 class="list_item" data-id="Changan" on:click={handleClick}>Changan</h2>
+      <h2 class="list_item" data-id="Kia" on:click={handleClick}>Kia</h2>
+      <h2 class="list_item" data-id="Лада" on:click={handleClick}>Лада</h2>
+      <h2 class="list_item" data-id="Mitsubishi" on:click={handleClick}>Mitsubishi</h2>
 		</div>
 	</div>
 	<div class="block2 mx-auto">
@@ -39,7 +39,7 @@
 			<h1 class="ml-9">Результат</h1>
 		</div>
 		<div class="car_grid">
-			{#each cars as car}
+			{#each filteredCars as car}
 				<a href="/car-{car.id}"><Auto {car} /></a>
 			{/each}
 		</div>

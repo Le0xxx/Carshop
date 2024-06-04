@@ -22,7 +22,7 @@
   <div class="zadnik mx-auto">
     <h1 class="ml-4">Найди свой идеальный автомобиль</h1>
     <div class="list">
-      <h2 class="list_item active" data-id="all" on:click={handleClick}><>Все марки</h2>
+      <h2 class="list_item active" data-id="all" on:click={handleClick}>Все марки</h2>
       <h2 class="list_item" data-id="Volkswagen" on:click={handleClick}>Volkswagen</h2>
       <h2 class="list_item" data-id="Toyota" on:click={handleClick}>Toyota</h2>
       <h2 class="list_item" data-id="Nissan" on:click={handleClick}>Nissan</h2>

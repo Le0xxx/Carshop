@@ -1,6 +1,6 @@
 <script lang="ts">
-	let mark = '';
-	let years = '';
+	let selectedMark = '';
+  	let filteredCars = [];
 	import Auto from '../BestAuto/Auto.svelte';
 	import { cars } from '$lib/database/cars';
 	function filterCars(mark) {
